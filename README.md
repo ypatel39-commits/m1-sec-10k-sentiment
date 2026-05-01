@@ -5,10 +5,13 @@
 [![tests](https://github.com/ypatel39-commits/m1-sec-10k-sentiment/actions/workflows/test.yml/badge.svg)](https://github.com/ypatel39-commits/m1-sec-10k-sentiment/actions/workflows/test.yml)
 [![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen.svg)](https://yash-sec-10k-sentiment.streamlit.app/)
 
 ---
 
 ## Demo
+
+🌐 **Live demo:** [yash-sec-10k-sentiment.streamlit.app](https://yash-sec-10k-sentiment.streamlit.app/)
 
 ![Negative-sentiment time-series for AAPL and JPM 10-K Risk Factors](docs/screenshot.png)
 
