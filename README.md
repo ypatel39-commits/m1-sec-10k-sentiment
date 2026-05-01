@@ -8,6 +8,23 @@
 
 ---
 
+## Demo
+
+![Negative-sentiment time-series for AAPL and JPM 10-K Risk Factors](docs/screenshot.png)
+
+```text
+$ sec10k -t AAPL -t MSFT -t JPM --limit 3
+ticker     fy_end  tokens  negative_ratio  net_sentiment  negative_yoy_delta
+  AAPL 2023-09-30   10042          0.0383        -0.0299                 NaN
+  AAPL 2024-09-28   10172          0.0379        -0.0295            -0.0004
+  AAPL 2025-09-27   10034          0.0402        -0.0300            +0.0022   <- tone deteriorating
+   JPM 2025-12-31   15838          0.0465        -0.0370                 NaN
+```
+
+Full output: [`docs/cli-demo.txt`](docs/cli-demo.txt) | Raw scores: [`docs/sample-output.csv`](docs/sample-output.csv)
+
+---
+
 ## Why this exists
 
 Equity research and asset management analysts read 10-K Risk Factor sections (Item 1A) looking for **shifts in management tone year-over-year**. A subtle increase in negative sentiment can flag emerging operational, regulatory, or competitive headwinds before they show up in numbers.
