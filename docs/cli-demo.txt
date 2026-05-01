@@ -1,20 +1,10 @@
-$ sec10k -t AAPL -t MSFT -t JPM --limit 3
-[INFO] Resolving CIK for AAPL... 0000320193
-[INFO] Resolving CIK for MSFT... 0000789019
-[INFO] Resolving CIK for JPM... 0000019617
-[INFO] Fetched 3 filings for AAPL
-[INFO] Fetched 3 filings for MSFT
-[INFO] Fetched 3 filings for JPM
-[INFO] Scoring with Loughran-McDonald lexicon (200 terms, frozenset)
+$ sec10k -t AAPL -t JPM --limit 2
+2026-05-01 02:18:59,984 [INFO] Found 2 10-K filings for AAPL
+2026-05-01 02:19:01,345 [INFO] Found 1 10-K filings for JPM
+ticker     fy_end  tokens  negative_ratio  net_sentiment  negative_yoy_delta  net_sentiment_yoy_delta
+  AAPL 2024-09-28   10172         0.03795       -0.02949                 NaN                      NaN
+  AAPL 2025-09-27   10034         0.04016       -0.03000             0.00222                 -0.00051
+   JPM 2025-12-31   15838         0.04647       -0.03700                 NaN                      NaN
 
-ticker     fy_end  tokens  negative_count  positive_count  negative_ratio  net_sentiment  negative_yoy_delta
-  AAPL 2023-09-30   10042             385              85          0.0383        -0.0299                 NaN
-  AAPL 2024-09-28   10172             386              86          0.0379        -0.0295            -0.0004
-  AAPL 2025-09-27   10034             403             102          0.0402        -0.0300            +0.0022   <- tone deteriorating
-  MSFT 2023-06-30       0               0               0          0.0000         0.0000                 NaN   (Item 1A used non-standard markup; skipped gracefully)
-  MSFT 2024-06-30       0               0               0          0.0000         0.0000             0.0000
-  MSFT 2025-06-30       0               0               0          0.0000         0.0000             0.0000
-   JPM 2025-12-31   15838             736             150          0.0465        -0.0370                 NaN
-
-[INFO] Wrote 7 rows to docs/sample-output.csv
-[INFO] Done in 6.4s (network: 5.1s, scoring: 1.3s)
+# Captured live on 2026-05-01 from cached SEC EDGAR 10-K filings.
+# Pipeline: EDGAR fetch -> Item 1A regex extraction -> Loughran-McDonald scoring.
