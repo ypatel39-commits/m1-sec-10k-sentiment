@@ -1,13 +1,33 @@
 [project]
 name = "m1-sec-10k-sentiment"
 version = "0.1.0"
-description = "Yash Patel - Finance Project: m1-sec-10k-sentiment"
+description = "SEC 10-K filing sentiment analyzer using the Loughran-McDonald financial lexicon"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+license = { text = "MIT" }
+authors = [{ name = "Yash Patel", email = "yashpatel06050@gmail.com" }]
+dependencies = [
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "pandas>=2.2",
+    "lxml>=5.0",
+    "streamlit>=1.30",
+    "plotly>=5.20",
+    "click>=8.1",
+]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
 
+[project.scripts]
+sec10k = "m1_sec_10k_sentiment.cli:main"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
