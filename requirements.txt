@@ -1,0 +1,13 @@
+# Streamlit Cloud install target.
+# Mirrors pyproject.toml [project.dependencies] plus a self-install of the
+# local package so `from m1_sec_10k_sentiment.pipeline import ...` resolves.
+requests>=2.31
+beautifulsoup4>=4.12
+pandas>=2.2
+lxml>=5.0
+streamlit>=1.30
+plotly>=5.20
+click>=8.1
+
+# Install the repo itself in editable mode so src/ layout is importable.
+-e .

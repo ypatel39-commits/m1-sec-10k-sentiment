@@ -1,0 +1,24 @@
+# Streamlit Cloud config for M1 SEC 10-K Sentiment.
+# Theme = ASU-flavored finance research dashboard.
+
+[theme]
+base = "light"
+primaryColor = "#8C1D40"        # ASU maroon
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F2F0"
+textColor = "#202020"
+font = "sans serif"
+
+[server]
+headless = true
+runOnSave = false
+enableCORS = false
+enableXsrfProtection = true
+maxUploadSize = 50              # MB; we don't take user uploads, keep modest
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = true
+toolbarMode = "minimal"
